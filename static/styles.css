@@ -1,0 +1,82 @@
+body{
+  background-image: url("images/burger.jpg");
+  padding-top: 5px;
+  background-size: cover;
+  }
+  h1{
+    font-size: 50px;
+  }
+  h2{
+    font-size: 30px;
+    color: #ff6600;
+  }
+  h3{
+    font-size: 25px;
+    }
+  li{
+    color: #efe8bf;
+  }
+  .menu {
+    max-width: 50em;
+  	margin: 50px;
+  }
+.head{
+    text-align: center;
+    color: #ff6600;
+  }
+  .head1{
+    color: #ff6600;
+  }
+.name{
+    font-size: 20px;
+    color: #ffff00;
+  }
+.price{
+    text-align: right;
+    float: right;
+    font-size: 20px;
+    color: #ffff00;
+  }
+.desc{
+  font-size: 19px;
+  color: #ff6600;
+}
+.newmenulink{
+  text-align: right;
+}
+.loginbutton{
+  max-width: 15em;
+	margin: 0 auto;
+	background-color: gray;
+	border: .1rem solid #d1d1d1;
+	padding: 3rem;
+	border-radius: 2rem;
+  color: orange;
+  font-size: 20px;
+}
+.logout{
+  text-align: right;
+  float: right;
+}
+a{
+  color: #efe8bf;
+}
+p{
+  font-size: 20px;
+  color: #ffff00;
+}
+input[type=submit]{
+  font-size: 20px;
+  width: 120px;
+  border-radius: 2em;
+  height: 40px;
+  background-color: #5de5f4;
+}
+input[type=text]{
+  font-size: 20px;
+  width: 200px;
+  text-align: center;
+  border-radius: 0.3em;
+  height: 35px;
+  background-color: #f7f5bb;
+}
