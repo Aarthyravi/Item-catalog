@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link rel = stylesheet type = text/css href = '{{url_for('static',filename='styles.css')}}'>
+</head>
+<body>
+  {% include "header.html" %}
+<div class = "menu">
+  <div class = "head1"><h1> Edit Menu Item </h1></div>
+<form method = 'POST' action = '{{url_for('editMenuItem',restaurant_id=restaurant_id,id=id)}}'>
+    <p> Name: </p>
+    <input type = "text" name = 'editmenuname' placeholder='{{editingmenu.name}}'><br>
+    <p> Description: </p>
+    <input type = "text" name = 'editmenudesc' placeholder="{{editingmenu.description}}"><br>
+    <p> Price: </p>
+    <input type = "text" name = 'editmenuprice' placeholder="{{editingmenu.price}}"><br>
+    <p> Course: </p>
+    <p>
+      <input type ="radio" value="Appetizer" name = "editmenucourse" {% if editingmenu.course == 'Appetizer' %} checked = "{{editingmenu.course}}"{% endif %}>Appetizer<br>
+      <input type ="radio" value="Entree" name = "editmenucourse" {% if editingmenu.course ==  'Entree' %} checked = "{{editingmenu.course}}"{% endif %}>Entree<br>
+      <input type ="radio" value="Dessert" name = "editmenucourse" {% if editingmenu.course == 'Dessert' %} checked = "{{editingmenu.course}}" {% endif %}>Dessert<br>
+      <input type ="radio" value="Beverage" name = "editmenucourse" {% if editmenucourse == 'Beverage' %} checked = "" {% endif %}>Beverage<br><br>
+    <input type = "submit" value = 'Edit Menu'></p>
+
+  <a href = '{{url_for('showMenu',restaurant_id=restaurant_id)}}'>Cancel</h2>
+</div>
+</form>
+</body>
+</html>

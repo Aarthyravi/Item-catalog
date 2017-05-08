@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link rel = stylesheet type = text/css href = '{{url_for('static',filename='styles.css')}}'>
+</head>
+<body>
+  {% include "header.html" %}
+  <div class = "menu">
+   <div class = "head1"><h1> Are you sure you want to delete <font color = "red"><u>{{deletingmenu.name}}</u></font> </h1></div><br>
+   <form action = '{{url_for('deleteMenuItem',restaurant_id = restaurant_id,id = id)}}' method = 'POST'>
+      <h2><input type = "submit" value = 'Delete'>
+      <a href = '{{url_for('showMenu',restaurant_id = restaurant_id)}}'>Cancel</a></h2>
+   </form>
+  </div>
+</body>
+</html>

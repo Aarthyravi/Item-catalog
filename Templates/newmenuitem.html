@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link rel = stylesheet type = text/css href = '{{url_for('static',filename='styles.css')}}'>
+</head>
+<body>
+  {% include "header.html" %}
+  <div class = "menu">
+  <div class = "head1"><h1> New Menu Item </h1><br></div>
+  <form action = '{{url_for('newMenuItem',restaurant_id = restaurant_id)}}' method = 'POST'>
+    <p> Name: </p>
+    <input type = "text" name = 'menuname'><br>
+    <p> Description: </p>
+    <input type = "text" name = 'menudesc'><br>
+    <p> Price: </p>
+    <input type = "text" name = 'menuprice'><br>
+    <p> Course: </p>
+    <p>
+      <input type ="radio" value="Appetizer" name = "menucourse">Appetizer<br>
+      <input type ="radio" value="Entree" name = "menucourse">Entree<br>
+      <input type ="radio" value="Dessert" name = "menucourse">Dessert<br>
+      <input type ="radio" value="Beverage" name = "menucourse">Beverage<br><br>
+    <input type = "submit" value = 'Create'></p>
+  </div>
+  </form>
+</body>
+</html>

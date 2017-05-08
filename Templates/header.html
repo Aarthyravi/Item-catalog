@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link rel = stylesheet type = text/css href = '{{url_for('static',filename='styles.css')}}'>
+</head>
+<body>
+<div class="menu">
+	<div class="head1">
+    <h3><a href="{{url_for('showRestaurants')}}">
+			<span class="glyphicon glyphicon-home" aria-hidden="true"></span>Show All Restaurants
+		</a>
+    <span class = "logout">
+			{%if 'username' not in session %}
+      <a href="{{url_for('showLogin')}}">Click Here to Login </a>
+			{% else %}
+			<a href="{{url_for('disconnect')}}">Logout</span> </a></h3>
+			{% endif %}
+
+	</div>
+</div>
+</body>
+</html>

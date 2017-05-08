@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link rel = stylesheet type = text/css href = '{{url_for('static',filename='styles.css')}}'>
+</head>
+<body>
+  {% include "header.html" %}
+  <div class = "menu">
+<div class = "head1"><h1> New Restaurant </h1></div>
+<form method = 'POST' action = '{{url_for('newRestaurant')}}'>
+  <input type= 'text' name = 'restname'>
+  <p><input type = "submit" value='Create '><p>
+</form>
+</div>
+</body>
+</html>

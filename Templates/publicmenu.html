@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <link rel = stylesheet type = text/css href = '{{url_for('static',filename='styles.css')}}'>
+</head>
+<body>
+  {% include "header.html" %}
+  <div class = "menu">
+  <div class = "head1"><h1>{{ restaurant.name }}</div>
+				 <img src="{{ creator.picture}}" height="100" width="100">
+				{{ creator.name }}
+
+			</h1>
+
+			{% with messages = get_flashed_messages() %}
+				{% if messages %}
+					<ul>
+						{% for message in messages %}
+							 <li> <strong> {{ message }} </strong> </li>
+						{% endfor %}
+					</ul>
+				{% endif %}
+			{% endwith %}
+
+	{% if items !=[] %}
+			<h2>Appetizers</h2>
+					{% for i in items %}
+						{% if i.course == 'Appetizer' %}
+               <div class = "nameandprice">
+                 <strong><span class = "name">{{i.name}}</span>
+                <span class = "price">{{i.price}}</span></strong>
+               </div>
+              <br>
+              <div class = "desc"><strong>{{i.description}}</strong></div>
+              <br>
+						{% endif %}
+					{% endfor %}
+
+				<h2>Entrees</h2>
+					{% for i in items %}
+						{% if i.course == 'Entree' %}
+              <div class = "nameandprice">
+                <strong><span class = "name">{{i.name}}</span>
+                <span class = "price">{{i.price}}</span></strong>
+              </div>
+              <br>
+              <div class = "desc"><strong>{{i.description}}</strong></div>
+              <br>
+						{% endif %}
+					{% endfor %}
+
+				<h2>Desserts</h2>
+					{% for i in items %}
+						{% if i.course == 'Dessert' %}
+                <div class = "nameandprice">
+                 <strong><span class = "name">{{i.name}}</span>
+                 <span class = "price">{{i.price}}</span></strong>
+                </div>
+               <br>
+               <div class = "desc"><strong>{{i.description}}</strong></div>
+               <br>
+						{% endif %}
+					{% endfor %}
+				<h2>Beverages</h2>
+					{% for i in items %}
+						{% if i.course == 'Beverage' %}
+                <div class = "nameandprice">
+                 <strong><span class = "name">{{i.name}}</span>
+                 <span class = "price">{{i.price}}</span></strong>
+               </div>
+               <br>
+               <div class = "desc"><strong>{{i.description}}</strong></div>
+               <br>
+						{% endif %}
+					{% endfor %}
+
+	{% endif %}
+</div>
+</body>
+</html>
