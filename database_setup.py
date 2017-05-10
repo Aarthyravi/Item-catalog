@@ -3,7 +3,7 @@ import sys
 
 from sqlalchemy import Column, ForeignKey, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, backref
 from sqlalchemy import create_engine
 Base = declarative_base()
 
@@ -40,7 +40,7 @@ class MenuItem(Base):
     description = Column(String(250))
     price = Column(String(8))
     restaurant_id = Column(Integer, ForeignKey('restaurant.id'))
-    restaurant = relationship(Restaurant)
+    restaurant = relationship(Restaurant, backref=backref('menu_item', cascade='all, delete')
     user_id = Column(Integer, ForeignKey('user.id'))
     user = relationship(User)
 
