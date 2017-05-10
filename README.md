@@ -11,3 +11,10 @@ How to develop a RESTful web application using the Python framework Flask along 
    3. Login to your vagrant environment 
        * $vagrant ssh
  
+# How to run your project
+   1. vagrant@vagrant-ubuntu-trusty-32:~$ cd /vagrant/project4FullstackFound
+   
+   2. vagrant@vagrant-ubuntu-trusty-32:/vagrant/project4FullstackFound$ python finalproject.py
+
+# Access and test my application by visiting http://localhost:5000 locally
+   
