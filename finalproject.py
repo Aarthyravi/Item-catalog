@@ -30,7 +30,7 @@ DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
 
-# Declare your login decorator.
+# Declare my login decorator.
 def login_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
