@@ -27,7 +27,8 @@ How to develop a RESTful web application using the Python framework Flask along 
    
    2. vagrant@vagrant-ubuntu-trusty-32:/vagrant/project4FullstackFound$ python database_setup.py
    
-# Populate/load information on tables.(Udacity already created this lotofmenu.py)
+# Populate/load information on tables.
+(Udacity already created this lotofmenu.py)
    
    1. vagrant@vagrant-ubuntu-trusty-32:/vagrant/project4FullstackFound$ python lotofmenu.py
       
