@@ -18,3 +18,17 @@ How to develop a RESTful web application using the Python framework Flask along 
 
  Access and test my application by visiting http://localhost:5000 locally
    
+# How to Create Database 
+
+   To initialize the SQLite database (create empty tables)
+   ##Database name is restaurantmenuwithusers.db
+   
+   1. vagrant@vagrant-ubuntu-trusty-32:~$ cd /vagrant/project4FullstackFound
+   
+   2. vagrant@vagrant-ubuntu-trusty-32:/vagrant/project4FullstackFound$ python database_setup.py
+   
+# Populate/load information on tables.(Udacity already created this lotofmenu.py)
+   
+   1. vagrant@vagrant-ubuntu-trusty-32:/vagrant/project4FullstackFound$ python lotofmenu.py
+      
+      
